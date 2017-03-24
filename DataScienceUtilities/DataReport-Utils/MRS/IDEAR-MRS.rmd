@@ -55,7 +55,7 @@ if (OS_type == 'windows'){
   print('Please input the path to the .yaml file after the next prompt.')
 }
 
-yaml_file <- file.choose()
+yaml_file <- tk_choose.files(caption='Select yaml File', multi = FALSE)
 config <- yaml.load_file(yaml_file)
 
 if(is.null(config$RowsPerRead)){
