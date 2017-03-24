@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>1_Group_Manager</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h2>Group Manager</h2>
+<p>After finishing this tutorial, group manager will complete these tasks:</p>
+<ul>
+<li>Set up Visual Studio Team Service (VSTS) server for the group</li>
+<li>Seed GroupProjectTemplate and GroupUtilities repositories from TDSP repositories developed by Microsoft.</li>
+<li>Set up security control to access to the GroupProjectTemplate and GroupUtilities repositories</li>
+</ul>
+<p>Dictionary of names used in this instruction.</p>
+<ul>
+<li><code>R01</code>: The group project template repository developed and managed by TDSP team of Microsoft.</li>
+<li><code>R02</code>: The group utilities repository developed and managed by TDSP team of Microsoft.</li>
+<li><code>R1</code>: The GroupProjectTemplate repository on Git you are going to set up on your VSTS group server.</li>
+<li><code>R2</code>: The GroupUtilities repository on Git you are going to set up on your VSTS group server.</li>
+<li><code>D01</code> and <code>D02</code>: The local directories on your machine that you are going to clone R01 and R02 to, respectively.</li>
+<li><code>D1</code> and <code>D2</code>: The local directories on your machine that you are going to clone R1 and R2 to, respectively.</li>
+</ul>
+<h3>1. Set up Visual Studio Team Services (VSTS) server and common repositories for your group</h3>
+<p>The VSTS server will be the server where all common repositories (e.g., the GroupProjectTemplate and GroupUtilities), all team repositories, and all project repositories will be hosted. The common repositories will be the ones that can be adopted by all teams and data science projects within your group.</p>
+<ul>
+<li>
+<p>Sign up VSO server</p>
+<p>Go to <a href="https://www.visualstudio.com/">Visual Studio online</a>, click <strong>sign in</strong> in the upper right corner.</p>
+<p><img src="media/login.PNG" /></p>
+<p>Sign in with your Microsoft account. If you do not have a Microsoft account, click <strong>Sign up now</strong> to create a Microsoft account, and then sign in using this account. </p>
+<p>If your organization has Visual Studio/MSDN subscription, click the link in the green box to sign in with your work or school account which has been added to this subscription. </p>
+<p><img src="media/signin.PNG" /></p>
+<p>After you sign in, click <strong>Create New Account</strong> in the upper right corner as in the following image.</p>
+<p><img src="media/create_account.PNG" /></p>
+<p>A window will be popped up asking you to fill in the information of the VSTS server you want to create. </p>
+<ul>
+<li>Fill in your <strong>server name</strong>. After this server is created, the URL of your server will be <em>https://&lt;servername&gt;.visualstudio.com</em>. </li>
+<li>Make sure that you select <strong><em>Git</em></strong> to manage your code.</li>
+<li>In field **Project name:&quot;, input <em>GroupCommon</em>. </li>
+<li>Choose <em><strong>Agile</strong></em> as the value for <strong>Organize work using:</strong>.</li>
+<li>Choose a geo location to <strong>Host your projects in:</strong>. In this example, we choose <em>South Central US</em>. </li>
+</ul>
+<p><img src="media/fill-in-account-information.PNG" /></p>
+<p>[Azure Note] If you see a popup window like the following after you click <em>Create new account</em>, you need to click <em><strong>Change details</strong></em> to expand the popup window in order to see all fields. </p>
+<p><img src="media/createaccount.PNG" /></p>
+<p>After your VSTS server is created, you will be directed to the VSTS server at <em>https://&lt;servername&gt;.visualstudio.com</em>.</p>
+<p><img src="media/server_created_2.PNG" /></p>
+</li>
+<li>
+<p>Rename the Default Repository of GroupCommon as GroupProjectTemplate (referred as R1 in this instruction)</p>
+<ul>
+<li>On the main page of your VSTS server, click <strong>Browse</strong>. Then, in the popup window, under the server name (<em>mysamplegroup</em> in this example), select <strong>GroupCommon</strong>. Click <strong>Navigate</strong> to go to the page of the team project <em>GroupCommon</em>. </li>
+</ul>
+<p><img src="media/rename-groupcommon-repo.PNG" /></p>
+<p><img src="media/rename-groupcommon-repo-2.PNG" /></p>
+<ul>
+<li>On the page of the team project <em>GroupCommon</em>, click <strong>Collaborate on code</strong>. You will be directed to the page of the default Git repository of team project <strong>GroupCommon</strong>. Currently, this Git repository is still empty. </li>
+</ul>
+<p><img src="media/rename-groupcommon-repo-3.PNG" /></p>
+<ul>
+<li>On the Git repository page of <strong>GroupCommon</strong>, click <strong>GroupCommon</strong> on the top left corner (the red box in the figure below), and select <strong>Manage repositories...</strong> (the green box in the figure below). You will be directed to the <em>Version Control</em> tab of your team project <strong>CONTROL PANEL</strong>.</li>
+</ul>
+<p><img src="media/rename-groupcommon-repo-4.PNG" /></p>
+<ul>
+<li>On the <em>Version Control</em> tab, click the GroupCommon repository on the left panel, and select <em>Rename repository</em>. </li>
+</ul>
+<p><img src="media/rename-groupcommon-repo-5.PNG" /></p>
+<ul>
+<li>In the popup window, provide a new name <em>GroupProjectTemplate</em>, and click <strong>Rename</strong>. </li>
+</ul>
+<p><img src="media/rename-groupcommon-repo-6.PNG" /></p>
+</li>
+<li>
+<p>Create GroupUtilities Repository under VSTS Server (referred as R2 in this instruction)</p>
+<p>On the <em>Version Control</em> tab of the <em>CONTROL PANEL</em> of your team project, click <strong>New repository...</strong>, then select <em>Git</em> as the <strong>Type</strong>, and provide <em>GroupUtilities</em> as the <strong>Name</strong>.</p>
+<p><img src="media/create-grouputilities-repo-1.PNG" /> </p>
+<p><img src="media/create-grouputilities-repo-2.PNG" /></p>
+<p>Now you can see there are two repositaries: GroupUtilities and GroupProjectTemplate under GroupCommon</p>
+<p><img src="media/two_repo_under_groupCommon.PNG" /></p>
+</li>
+</ul>
+<h3>2. Seed GroupProjectTemplate (R1) and GroupUtilities (R2) from TDSP Repositories ProjectTemplate (referred as R01) and Utilities (referred as R02) (from public GitHub in the future)</h3>
+<p>In this step, you are going to seed your two repositories GroupProjectTemplate (R1) and GroupUtilities (R2) from the two repositories ProjectTemplate (R01) and Utilities (R02) managed by TDSP team from Microsoft. After this step, your R1 repository will have the same set of directories and document templates as in R01, and your R2 repository will have the set of data science utilities developed by Microsoft TDSP team.</p>
+<ul>
+<li>
+<p><strong>Prerequisite</strong>: </p>
+<ul>
+<li>Git is installed on your machine. If you are using Data Science Virtual Machine, Git has been pre-installed and you are good to go. Otherwise, please refer to sections <strong>Install Git on Windows and Linux machine</strong> and <strong>Provision Data Science Virtual Machine</strong> in <a href="./5_Tool.md">Tools</a>.  
+</li>
+<li>If you are using <strong>Windows DSVM</strong>, you need to have <a href="https://github.com/Microsoft/Git-Credential-Manager-for-Windows">Git Credential Manager (GCM)</a> installed on your machine. On the <em>README.md</em>, scroll down to section <strong>Download and Install</strong>, and click the <em>latest installer</em>. You will be directed to the latest installer page. Download the .exe installer and run it. </li>
+<li>If you are using <strong>Linux DSVM</strong>, create SSH public key on your DSVM and add it to your group VSTS server. For details about SSH, please refer to <strong>Create SSH public key</strong> section in <a href="./5_Tool.md">Tools</a>.</li>
+</ul>
+</li>
+<li>
+<p>Clone TDSP ProjectTemplate repository (R01) and TDSP Utilities (R02) from TDSP VSTS server to folders in your local DSVM as D01 and D02</p>
+<ul>
+<li>
+<p>Create a directory as the root directory to host all your clones of the repositories. For instance, in Windows DSVM, create a directory <code>C:\GitRepos\DGADSCommon</code>. In Linux DSVM, create a directory <code>GitRepos\DGADSCommon</code> in your home directory. </p>
+</li>
+<li>
+<p>Enter the <code>GitRepos\DGADSCommon</code> directory, and run the following commands, based on the operating system of your DSVM. </p>
+</li>
+</ul>
+<p><strong>Windows DSVM</strong>
+<code>git clone https://dg-ads.visualstudio.com/DGADSCommon/_git/ProjectTemplate
+git clone https://dg-ads.visualstudio.com/DGADSCommon/_git/Utilities</code></p>
+<p><img src="media/two_folder_cloned_from_TDSP.PNG" /></p>
+<p><strong>Linux DSVM</strong>
+<code>git clone ssh://DG-ADS@dg-ads.visualstudio.com:22/DGADSCommon/_git/ProjectTemplate
+git clone ssh://DG-ADS@dg-ads.visualstudio.com:22/DGADSCommon/_git/Utilities</code>
+<img src="media/two_folder_cloned_from_TDSP_linux.PNG" /></p>
+<ul>
+<li>After the clones complete, you should be able to see two directories <em>ProjectTemplate</em> and <em>Utilities</em> under <code>GitRepos\DGADSCommon</code> directory. </li>
+</ul>
+<p>[Azure Notes] Currently TDSP ProjectTemplate (R01) and Utilities (R02) repositories are on the TDSP VSTS server. In order to clone these two repositories, you have to be added to the DGADSCommon team project. In the future, in order to allow public access, these two repositories will be hosted on public GitHub. </p>
+</li>
+<li>
+<p>Clone GroupProjectTemplate repository (R1) and GroupUtilities repository (R2) on local directories (referred as D1 and D2, respectively) under <code>GitRepos\GroupCommon</code> on your DSVM</p>
+<ul>
+<li>Get the URLs of the repositories. Go to your GroupCommon home page (usually with URL https://&lt;VSTS Server Name&gt;.visualstudio.com/GroupCommon). Click <strong>CODE</strong>. Choose the repository, either GroupProjectTemplate or GroupUtilities, and copy the <em>Clone URL</em> (HTTPS for Windows or SSH for Linux, based on the operating system of the DSVM you are going to clone the repository to).  
+</li>
+</ul>
+<p><img src="media/find_https_ssh_2.PNG" /></p>
+<ul>
+<li>In PowerShell script prompt (Windows) or Shell command (Linux), change directory to <code>GitRepos\GroupCommon</code>, run the following commands to clone R1 and R2 into <code>GitRepos\GroupCommon</code>.</li>
+</ul>
+<p><strong>Windows DSVM</strong></p>
+<p><code>git clone &lt;the HTTPS URL of the GroupProjectTemplate repository&gt;
+git clone &lt;the HTTPS URL of the GroupUtilities repository&gt;</code></p>
+<p><img src="media/clone_two_empty_group_reo_2.PNG" /></p>
+<p><strong>Linux DSVM</strong>
+<code>git clone &lt;the SSH URL of the GroupProjectTemplate repository&gt;
+git clone &lt;the SSH URL of the GroupUtilities repository&gt;</code>
+<img src="media/clone_two_empty_group_reo_linux_2.PNG" /></p>
+<p>[Azure Notes] You will receive warning messages that D1 and D2 are empty. </p>
+</li>
+<li>
+<p>Seed your GroupProjectTemplate and GroupUtilities Repositories from the TDSP Repositories (R01 and R02)</p>
+<p>Now in your local machine, we need to copy the content of ProjectTemplate and Utilities directories (except the metadata in .git directories) under <em>GitRepos\DGADSCommon</em> to your GroupProjectTemplate and GroupUtilities directories under <code>GitRepos\GroupCommon</code>. Run the following scripts in PowerShell console (Windows) or Shell script console (Linux). The files in <code>GitRepos\DGADSCommon\ProjectTemplate</code> (D01) will be copied to <code>GitRepos\GroupCommon\GroupProjectTemplate</code> (D1), and the files in <code>GitRepos\DGADSCommon\Utilities</code> (D02) will be copied to <code>GitRepos\GroupCommon\Utilities</code> (D2). </p>
+<p>You will be prompted to input the paths to D01, D1, D02, and D2. The paths you input will be validated. If you input a directory that does not exist, you will be asked to input again. </p>
+<p><strong>Windows DSVM</strong>		
+<code>wget &quot;https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/TDSP/tdsp_local_copy_win.ps1&quot; -outfile &quot;tdsp_local_copy_win.ps1&quot;
+.\tdsp_local_copy_win.ps1 1</code>		</p>
+<p><img src="media/copy_two_folder_to_group_folder_2_new.PNG" /></p>
+<p>Now you can see that files in directories D01 and D02 (except files in the .git directory) are copied to D1 and D2, respectively.</p>
+<p><img src="media/two_folder_to_group_folder_copied_new.PNG" /></p>
+<p><strong>Linux DSVM</strong>
+<code>wget &quot;https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/TDSP/tdsp_local_copy_linux.sh&quot;
+bash tdsp_local_copy_linux.sh 1</code></p>
+<p><img src="media/copy_two_folder_to_group_folder_linux_2_new.PNG" /></p>
+<p>Now you see that the files in the two folders (except files in the .git directory) are copied to GroupProjectTemplate and GroupUtilities respectively.</p>
+<p><img src="media/two_folder_to_group_folder_copied_linux_new.PNG" /></p>
+</li>
+<li>
+<p>Customize contents in D1 and D2, if needed</p>
+<p>If you want to customize the contents in D1 and D2 to meet the specific needs of your group, now it is the time to do so. You can modify the template documents, change the directory structure, or add existing utilities your group has developed and are helpful for your entire group. </p>
+</li>
+<li>
+<p>Add contents in D1 and D2 to R1 and R2 on group server</p>
+<p>Now, you need to add the contents in D1 and D2 to repositories R1 and R2. Here are the git bash commands you can run in both Windows PowerShell or Linux. </p>
+<p>Enter the directory <code>GitRepos\GroupCommon\GroupProjectTemplate</code>, run the following commands.
+<code>git status
+git add .
+git commit -m&quot;push from win DSVM&quot;
+git push</code>
+<img src="media/push_to_group_server_2.PNG" /></p>
+<p>You can see that in your group's VSO server, in the GroupProjectTemplate repository, the files are synced instantly.</p>
+<p><img src="media/push_to_group_server_showed_up_2.PNG" /></p>
+<p>Changing directory to <code>GitRepos\GroupCommon\GroupUtilities</code>, run the same set of four commands as above.</p>
+<p>[Azure Note] If this is the first time you commit to a Git repository, you will be asked to provide your name and email address. Please use the same name and email address when you commit to these two repositories. Using the same name and email address will provide convenience when later on you build PowerBI dashboard to track your Git activities on multiple repositories. </p>
+<p><img src="media/git_config_name.PNG" /></p>
+</li>
+</ul>
+<h3>3. Add group members to group server</h3>
+<p>From your group VSO server's homepage, click the <strong>gear icon</strong> next to your user name in the upper right corner, then click <strong>Security</strong>, you may add members to your group with different permissions. More details please refer to <strong>Security Control</strong> section in <a href="./5_Tools.md">Tools</a>.</p>
+<p><img src="media/add_member_to_group.PNG" /> </p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>3_Project_Lead</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h2>Project Lead</h2>
+<p>If you are leading a team for a data science project, or if you are the only data scientist working on a data science project, this instruction is for you. </p>
+<p>After finishing this tutorial, you will:</p>
+<ul>
+<li>Create project repository in your team project on your group VSTS server</li>
+<li>Seed ProjectTemplate from TeamProjectTemplate</li>
+<li>Create project file share as a project resource (optional)</li>
+<li>Mount project file share to your DSVM (optional)</li>
+<li>Add project members and security control</li>
+</ul>
+<p>Dictionary of names used in this instruction.</p>
+<ul>
+<li><code>R3</code>: The TeamProjectTemplate repository on Git that your team lead has set up on your VSTS group server.</li>
+<li><code>R4</code>: The TeamUtilities repository on Git that your team lead has setup on your VSTS group server.</li>
+<li><code>R5</code>: The Project repository on Git you are going to setup for your project on your VSTS group server.</li>
+<li><code>D3</code>, <code>D4</code>, and <code>D5</code>: The local directories on your machine that you are going to clone <code>R3</code>, <code>R4</code>, and <code>R5</code> to, respectively.</li>
+</ul>
+<h3>1. Prerequisites:</h3>
+<ul>
+<li>Your team lead has set up the team project and two repositories <em>TeamProjectTemplate</em> (<code>R3</code>) and <em>TeamUtilities</em> (<code>R4</code>) on your group VSTS server.</li>
+<li>You have been added to your team project with the privilege to create project repositories.</li>
+</ul>
+<p>If any of these two steps has not been completed, please reach out to your team lead or his/her delegate to set it up by following the <a href="./2_Team_Lead.html">instructions</a>.</p>
+<ul>
+<li>Git is installed on your machine. If you are using Data Science Virtual Machine, Git has been pre-installed and you are good to go. Otherwise, please refer to sections <strong>Install Git on Windows and Linux machine</strong> and <strong>Provision Data Science Virtual Machine</strong> in <a href="./5_Tool.md">Tools</a>.  </li>
+<li>If you are using <strong>Windows machine</strong>, you need to have <a href="https://github.com/Microsoft/Git-Credential-Manager-for-Windows">Git Credential Manager (GCM)</a> installed on your machine. On the <em>README.md</em>, scroll down to section <strong>Download and Install</strong>, and click the <em>latest installer</em>. You will be directed to the latest installer page. Download the .exe installer and run it. </li>
+<li>If you are using <strong>Linux machine</strong>, create SSH public key on your DSVM and add it to your group VSTS server. For details about SSH, please refer to <strong>Create SSH public key</strong> section in <a href="./6_Tools.html">Tools</a>.</li>
+</ul>
+<h3>2. Create project repository (<code>R5</code>) under Team project <em>MyTeam</em></h3>
+<ul>
+<li>
+<p>Assuming that you have logged in to your group VSTS server at <em>https://&lt;VSTS Server Name&gt;.visualstudio.com</em>. Under <strong>Recent projects &amp; teams</strong>, click <strong>Browse</strong>. A window will be popped up which lists all team projects on the VSTS server. </p>
+<p><img src="media/create-project-repo-1.PNG" /></p>
+</li>
+<li>
+<p>Click the team project name that you are going to create your project repository in. In this example, click <strong>MyTeam</strong>. Then, click <strong>Navigate</strong>. You will be directed to the home page of the team project <strong>MyTeam</strong>.</p>
+<p><img src="media/create-project-repo-2.PNG" /></p>
+</li>
+<li>
+<p>Click <em><strong>Collaborate on code</strong></em>, you will be directed to the git home page of your team project. Click the downward arrow at the top left corner, and select <em><strong>+ New repository</strong></em>. Then, in the popup window, input a name for your project git repository. Make sure that you select <em><strong>Git</strong></em> as the type of the repository. In this example, we use the name <em>DSProject1</em>. Then, click <em><strong>Create</strong></em>. Your project git repository will be created. </p>
+</li>
+</ul>
+<p><img src="media/create-project-repo-3.PNG" /></p>
+<p><img src="media/create-project-repo-4.PNG" /></p>
+<p><img src="media/create-project-repo-5.PNG" /></p>
+<h3>3. Seed DSProject1 repository (R5) from your team project template repository (R3)</h3>
+<ul>
+<li>Clone your team project template repository (R3) to a directory (D3) on your local machine.</li>
+</ul>
+<p>On your local machine, create a directory <em>C:\GitRepos\MyTeamCommon</em> (Windows), or <em>$home/GitRepos/MyTeamCommon</em> (Linux), and change to that directory. Then, run the following command to clone your team project template repository to your local machine. </p>
+<p><strong>Windows</strong></p>
+<pre><code>git clone &lt;the HTTPS URL of the TeamProjectTemplate repository&gt;
+</code></pre>
+
+<p>Typically, the <em>HTTPS URL of your team project template repository</em> is <em>https://&lt;VSTS Server Name&gt;.visualstudio.com/&lt;Your team project name&gt;/_git/&lt;Your team project template repository name&gt;</em>. In this example, we have <em>https://mysamplegroup.visualstudio.com/MyTeam/_git/MyTeamProjectTemplate</em>. </p>
+<p><img src="media/clone-team-project-template.PNG" /></p>
+<p><strong>Linux</strong></p>
+<pre><code>git clone &lt;the SSH URL of the TeamProjectTemplate repository&gt;
+</code></pre>
+
+<p><img src="media/clone-team-project-template-linux.PNG" /></p>
+<p>Typically, the <em>SSH URL of the team project template repository</em> is _ssh://&lt;VSTS Server Name&gt;@&lt;VSTS Server Name&gt;.visualstudio.com:22/<Your Team Project Name>/_git/&lt;Your team project template repository name&gt;. In this example, we have <em>ssh://mysamplegroup@mysamplegroup.visualstudio.com:22/MyTeam/_git/MyTeamProjectTemplate</em>. </p>
+<ul>
+<li>Clone DSProject1 repository (R5) to a directory (D5) on your local machine</li>
+</ul>
+<p>Change directory to <em>GitRepos</em>, and run the following command to clone your project repository to your local machine. </p>
+<p><strong>Windows</strong></p>
+<pre><code>git clone &lt;the HTTPS URL of the Project repository&gt;
+</code></pre>
+
+<p><img src="media/clone-project-repository.PNG" /></p>
+<p><strong>Linux</strong></p>
+<pre><code>git clone &lt;the SSH URL of the Project repository&gt;
+</code></pre>
+
+<p><img src="media/clone-project-repository-linux.PNG" /></p>
+<p>Typically, the <em>SSH URL of the project repository</em> is _ssh://&lt;VSTS Server Name&gt;@&lt;VSTS Server Name&gt;.visualstudio.com:22/<Your Team Project Name>/_git/&lt;Your project repository name&gt;. In this example, we have <em>ssh://mysamplegroup@mysamplegroup.visualstudio.com:22/MyTeam/_git/DSProject1</em>.</p>
+<ul>
+<li>Copy contents in D3 to D5 </li>
+</ul>
+<p>Now in your local machine, you need to copy the content of <em>D3</em> to <em>D5<em>, except the git metadata in .git directory. The following scripts will do the job. Make sure to type in the correct paths to the directories. Source folder is the one from your team (</em>D3</em>); destination folder is the one for your project (<em>D5</em>).	</p>
+<p><strong>Windows</strong></p>
+<pre><code>wget &quot;https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/TDSP/tdsp_local_copy_win.ps1&quot; -outfile &quot;tdsp_local_copy_win.ps1&quot;
+.\tdsp_local_copy_win.ps1 3
+</code></pre>
+
+<p><img src="media/local-copy-project-lead-new.PNG" /></p>
+<p>Now you can see in <em>DSProject1</em> folder, all the files (excluding the .git) are copied from <em>MyTeamProjectTemplate</em>.</p>
+<p><img src="media/teamprojectTemplate_copied_to_local.PNG" /></p>
+<p><strong>Linux</strong></p>
+<pre><code>wget &quot;https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/TDSP/tdsp_local_copy_linux.sh&quot;
+bash tdsp_local_copy_linux.sh 3
+</code></pre>
+
+<p><img src="media/local_copy_project_lead_linux_new.PNG" /></p>
+<p>Now you can see in <em>DSProject1</em> folder, all the files (except the metadata in .git) are copied from <em>MyTeamProjectTemplate</em>.</p>
+<p><img src="media/teamprojectTemplate_copied_to_local_linux_new.PNG" /></p>
+<ul>
+<li>
+<p>Make changes to D5 if needed
+If your project needs some specific directories or documents, other than the ones you get from your team project template (copied to your D5 directory in the previous step), you can customize the content of D5 now. </p>
+</li>
+<li>
+<p>Add contents in D5 to R5 on your group VSTS server</p>
+</li>
+</ul>
+<p>You now need to push contents in <strong><em>DSProject1</em></strong> to <em>R5</em> repository in your team project on your group's VSTS server. Change to directory <em>D5</em>, and use the following git commands to add contents in <em>D5</em> to <em>R5</em>, commit the change, and push. The commands are the same for both Windows and Linux systems. </p>
+<pre><code>git status
+git add .
+git commit -m&quot;push from win DSVM&quot;
+git push
+</code></pre>
+
+<p>[Azure Note] If this is the first time you commit to a Git repository, you will be asked to provide your name and email address. Please use the same name and email address when you commit to these two repositories. Using the same name and email address will provide convenience when later on you build PowerBI dashboard to track your Git activities on multiple repositories.</p>
+<p><img src="media/git_config_name.PNG" /></p>
+<h3>4. Create and mount Azure file shares as project resources (Optional)</h3>
+<p>If you want to create Azure file shares to share data, such as the project raw data and the features generated for your project, so that all project members have access to the same datasets from multiple DSVMs, follow the detailed instructions in sections 4 and 5 of <a href="./2_Team_Lead.html">2<em>Team</em>Lead.md</a>.</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

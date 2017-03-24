@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2_Team_Lead</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h2>Team Lead</h2>
+<p>After finishing this tutorial, team lead will complete these tasks:</p>
+<pre><code>- Create your team project on the group VSTS server
+- Create TeamProjectTemplate and TeamUtilities repositories under your team project
+- Seed TeamProjectTemplate from GroupProjectTemplate repository, and customize TeamUtilities repository
+- Create team data and analytics resources
+- Mount team file shares to add data assets
+- Add team members and security control
+</code></pre>
+
+<p>Azure file shares can be used to share data resources that might be useful for the projects that your team might be carrying out. For instance, if your team is a demand forecasting team, some publicly available data such as stock indices and Purchasing Manager Index (PMI) might be useful data resources. A good feature of Azure file share is that it can be mounted to multiple Azure virtual machines just like a local disk. Any change made on the file share can be immediately visible to all virtual machines that the file share is mounted to.</p>
+<p>Dictionary of names used in this instruction.</p>
+<ul>
+<li><code>R1</code> : The GroupProjectTemplate repository on Git you are going to set up on your VSTS group server.</li>
+<li><code>R2</code> : The GroupUtilities repository on Git you are going to set up on your VSTS group server.</li>
+<li><code>R3</code> : The TeamProjectTemplate repository on Git you are going to set up on your VSTS group server.</li>
+<li><code>R4</code> : The TeamUtilities repository on Git you are going to setup on your VSTS group server.</li>
+<li><code>D1</code> and <code>D2</code> : The local directories on your machine that you are going to clone <code>R1</code> and <code>R2</code> to, respectively.</li>
+<li><code>D3</code> and <code>D4</code> : The local directories on your machine that you are going to clone <code>R3</code> and <code>R4</code> to, respectively.</li>
+</ul>
+<blockquote>
+<p>[AZURE.NOTE] For small data science group that might not have multiple data science teams, or even larger data science group with multiple data science teams but wants to get convenience on inter-team collaboration, and/or group-level sprint planning, the entire group can choose to create a single team project, and all projects from all data science teams each has a single repository under this single team project. If this fits your needs better than each data science team having an individual team project, your entire data science group can designate a git administrator to follow this instruction to create a single team project. </p>
+</blockquote>
+<p>If some teams would like to have team-specific project templates, or team-specific utilities, the team leads or delegates should create team project template repositories and/or team utilities repositories under the same team project. You can name these repositories as <em>&lt;TeamName&gt;ProjectTemplate</em> and <em>&lt;TeamName&gt;Utilities</em>, for instance, <em>TeamJohnProjectTemplate</em> and <em>TeamJohnUtilities</em>. Then, the team leads need to let their team members know which template and utilities repositories to adopt when they are setting up and cloning the project and utilities repositories.</p>
+<p>Then, all project leads should follow the <a href="./3_Project_Lead.html">project lead instructions</a> to create project  repositories under this single team project. </p>
+<h3>1. Prerequisites:</h3>
+<ul>
+<li>Your group VSTS server has been set up by your group manager.</li>
+<li>GroupProjectTemplate repository (R1) and GroupUtilities repository (R2) have been set up on your group VSTS server by your group manager</li>
+<li>You have been added to your group VSTS server with the privilege to creating team projects.</li>
+</ul>
+<p>If any of these two privileges has not been completed, please reach out to your group manager or his/her delegate to set it up by following the <a href="./1_Group_Manager_v3.md">instructions</a>.</p>
+<ul>
+<li>Git is installed on your machine. If you are using Data Science Virtual Machine, Git has been pre-installed and you are good to go. Otherwise, please refer to sections <strong>Install Git on Windows and Linux machine</strong> and <strong>Provision Data Science Virtual Machine</strong> in <a href="./5_Tool.md">Tools</a>.  </li>
+<li>If you are using <strong>Windows machine</strong>, you need to have <a href="https://github.com/Microsoft/Git-Credential-Manager-for-Windows">Git Credential Manager (GCM)</a> installed on your machine. On the <em>README.md</em>, scroll down to section <strong>Download and Install</strong>, and click the <em>latest installer</em>. You will be directed to the latest installer page. Download the .exe installer and run it. </li>
+<li>If you are using <strong>Linux machine</strong>, create SSH public key on your DSVM and add it to your group VSTS server. For details about SSH, please refer to <strong>Create SSH public key</strong> section in <a href="./5_Tool.html">Tools</a>.</li>
+</ul>
+<h3>2. Create team project on your group VSTS server</h3>
+<ul>
+<li>Go to your group's VSTS server homepage at URL https://&lt;VSTS Server Name&gt;.visualstudio.com. </li>
+<li>Click <strong>New</strong> to create a team project. A popup window will show asking you to input the Project name (<em>MyTeam</em> in this example). Make sure that you select <em>Agile</em> as the <strong>Process template</strong>, and <em>Git</em> as the <strong>Version control</strong>. Click <strong>Create project</strong>. Your team project <em>MyTeam</em> will be created in less than 1 minute. 
+<img src="media/create-new-team.PNG" /></li>
+</ul>
+<p><img src="media/create-new-team-2.PNG" />
+- After the team project <em>MyTeam</em> is created, click <strong>Nagivate to project</strong> button, you will be directed to the home page of your team project. If you see a <em>Congratulations!</em> popup window, click the button <strong>Add code</strong> (in red box). Otherwise, click <strong>Code</strong> (in yellow box). You will be directed to the Git repository page of your team project. </p>
+<p><img src="media/create-new-team-3.PNG" /></p>
+<p><img src="media/team-project-home.PNG" /></p>
+<p>On the Git repository page of your team project, click the downward arrow beside repository name <em>MyTeam</em>, and select <em>Manage repositories...</em>. </p>
+<p><img src="media/rename-team-project-repo.PNG" /></p>
+<p>On the <strong>Version control</strong> tab of the control panel of your team project, click <em>MyTeam</em>, then select <em>Rename repository...</em>. Input a new name to the repository, in this example, <em>MyTeamProjectTemplate</em>. You can choose something like <em>&lt;Your team name&gt;ProjectTemplate</em>. Click <strong>Rename</strong> to continue.</p>
+<p><img src="media/rename-team-project-repo-2.PNG" /></p>
+<p><img src="media/rename-team-project-repo-3.PNG" /></p>
+<ul>
+<li>Create a new repository <em>&lt;your team name&gt;Utilities</em> under your team project. 
+Click <strong>New repository...</strong> on the <strong>Version control</strong> tab of your team project's control panel. In the popup window, provide a name for this repository. In this example, we name it as <em>MyTeamUtilities</em>. You can choose something like <em>&lt;your team name&gt;Utilities</em>. Make sure that you select <em>Git</em> for <strong>Type</strong>. Then, click <strong>Create</strong> to continue. </li>
+</ul>
+<p><img src="media/create-team-utilities.PNG" /></p>
+<p><img src="media/create-team-utilities-2.PNG" /></p>
+<p>Now you should be able to see two repositories created under your team project <em>MyTeam</em>.</p>
+<p><img src="media/two-repo-in-team.PNG" /></p>
+<h3>3. Seed your team ProjectTemplate repository (R3) from your GroupProjectTemplate (R1)</h3>
+<p>In this step, you initiate your team ProjectTemplate repository (R3) from your GroupProjectTemplate (R1). If you want to customize your ProjectTemplate repository to meet your specific needs, this is the time for you to customize it.</p>
+<ul>
+<li>Create directories <em>C:\GitRepos\GroupCommon</em> and <em>C:\GitRepos\MyTeam</em> on your machine (Windows), or <em>GitRepos\GroupCommon</em> and <em>GitRepos\MyTeam</em> on your home directory (Linux). Change to directory <em>GitRepos\GroupCommon</em>.</li>
+<li>Run the following commands based on the operating system of your machine. These commands will clone your <em>GroupProjectTemplate</em> (R1) and <em>GroupUtilities</em> repositories (R2) on your group VSTS server to local directories in <em>GitRepos\GroupCommon</em> on your local machine. After cloning, two directories <em>GroupProjectTemplate</em> (referred as D1) and <em>GroupUtilities</em> (referred as D2) will be created in directory <em>GitRepos\GroupCommon</em>. Here, we assume that your group manager created a team project GroupCommon, and the GroupProjectTemplate and GroupUtilities repositories are under this team project. </li>
+</ul>
+<p><strong>Windows</strong></p>
+<pre><code>git clone https://&lt;Your VSTS Server name&gt;.visualstudio.com/GroupCommon/_git/GroupProjectTemplate
+git clone https://&lt;Your VSTS Server name&gt;.visualstudio.com/GroupCommon/_git/GroupUtilities
+</code></pre>
+
+<p><img src="media/create_two_group_repos.PNG" /></p>
+<p><strong>Linux</strong></p>
+<pre><code>git clone ssh://&lt;Your VSTS Server name&gt;@&lt;Your VSTS Server name&gt;.visualstudio.com:22/GroupCommon/_git/GroupProjectTemplate
+git clone ssh://&lt;Your VSTS Server name&gt;@&lt;Your VSTS Server name&gt;.visualstudio.com:22/GroupCommon/_git/GroupUtilities
+</code></pre>
+
+<p><img src="media/clone_two_group_repos_linux.PNG" /></p>
+<ul>
+<li>Change to directory <em>GitRepos\MyTeam</em></li>
+<li>Run the following commands based on the operating system of your machine. These commands will clone your <em>MyTeamProjectTemplate</em> (R3) and <em>MyTeamUtilities</em> repositories (R4) under your team project <em>MyTeam</em> on your group VSTS server to local directories in <em>GitRepos\MyTeam</em> on your local machine. After cloning, two directories <em>MyTeamProjectTemplate</em> (referred as D3) and <em>MyTeamUtilities</em> (referred as D4) will be created in directory <em>GitRepos\MyTeam</em>. Here, we assume that you named your team project template and utilities repositories as <em>MyTeamProjectTemplate</em> and <em>MyTeamUtilities</em>. </li>
+</ul>
+<p><strong>Windows</strong></p>
+<pre><code>git clone https://&lt;Your VSTS Server name&gt;.visualstudio.com/&lt;Your Team Name&gt;/_git/MyTeamProjectTemplate
+git clone https://&lt;Your VSTS Server name&gt;.visualstudio.com/&lt;Your Team Name&gt;/_git/MyTeamUtilities
+</code></pre>
+
+<p><img src="media/clone_two_empty_team_repos.PNG" /></p>
+<p><strong>Linux</strong></p>
+<pre><code>git clone ssh://&lt;Your VSTS Server name&gt;@&lt;Your VSTS Server name&gt;.visualstudio.com:22/&lt;Your Team Name&gt;/_git/MyTeamProjectTemplate
+git clone ssh://&lt;Your VSTS Server name&gt;@&lt;Your VSTS Server name&gt;.visualstudio.com:22/&lt;Your Team Name&gt;/_git/MyTeamUtilities
+</code></pre>
+
+<p><img src="media/clone_two_empty_team_repos_linux.PNG" /></p>
+<ul>
+<li>Copy contents in D1 to D3, except the metadata in directory <em>.git</em>. </li>
+</ul>
+<p>Run the following shell scripts in PowerShell commandline (Windows), or Linux shell, depending on the operating system. You will be prompted to provide the paths to the source directory D1 and to the destination directory D3. </p>
+<p><strong>Windows</strong>		</p>
+<pre><code>wget &quot;https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/TDSP/tdsp_local_copy_win.ps1&quot; -outfile &quot;tdsp_local_copy_win.ps1&quot;
+.\tdsp_local_copy_win.ps1 2
+</code></pre>
+
+<p><img src="media/local_copy_team_lead_new.PNG" /></p>
+<p><strong>Linux DSVM</strong></p>
+<pre><code>wget &quot;https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/TDSP/tdsp_local_copy_linux.sh&quot;
+bash tdsp_local_copy_linux.sh 2
+</code></pre>
+
+<p><img src="media/local_copy_team_lead_linux_new.PNG" /></p>
+<ul>
+<li>Customize your <em>MyTeamProjectTemplate</em> (D3) and <em>MyTeamUtilities</em> (D4), if needed.</li>
+</ul>
+<p>If you want to customize the contents in D3 to meet the specific needs of your team, now it is the time to do so. You can modify the template documents, or change the directory structure.</p>
+<p>If your team has developed some utilities that you want to share with your entire team, copy and paste these utilities into directory D4. </p>
+<ul>
+<li>Add contents in D3 and D4 to R3 and R4 on your group VSTS server</li>
+</ul>
+<p>Now, you need to add the contents in D3 and D4 to repositories R3 and R4. Here are the git bash commands you can run in both Windows PowerShell or Linux. </p>
+<p>Enter the directory <em>GitRepos\MyTeam\MyTeamProjectTemplate</em>, run the following commands.</p>
+<pre><code>git status
+git add .
+git commit -m&quot;push from DSVM&quot;
+git push
+</code></pre>
+
+<p><img src="media/push_to_group_server_2.PNG" /></p>
+<p>You can see that in your group's VSO server, in the MyTeamProjectTemplate repository, the files are synced instantly.</p>
+<p><img src="media/push_to_group_server_showed_up_2.PNG" /></p>
+<p>Changing directory to <em>GitRepos\MyTeam\MyTeamUtilities</em>, run the same set of four git commands.</p>
+<p>[Azure Note] If this is the first time you commit to a Git repository, you will be asked to provide your name and email address. Please use the same name and email address when you commit to these two repositories. Using the same name and email address will provide convenience when later on you build PowerBI dashboard to track your Git activities on multiple repositories.</p>
+<p><img src="media/git_config_name.PNG" /></p>
+<h3>4. Create team data and analytics resources (Optional)</h3>
+<p>You might want to create some data and/or analytics resources to share with your entire team so that they can execute the projects on the shared resources, save on budgets, and get efficiency. In this section, we just provide instructions on how to create and mount Azure file storage. For other resources like Azure Data Science Virtual Machines, Azure HDInsight Spark Clusters, etc, please refer to <a href="./5_Resources.html"><strong>Azure Data and Analytics Resources</strong></a>, which provides you some guidance on selecting the right resources for your needs, and links to product pages and some useful tutorials we have published.</p>
+<p><strong><em>Requirements on creating and mounting Azure file storage</em></strong>. The resource group, storage account, and the Azure VM (e.g., DSVM) have to be in the same Azure data center. </p>
+<p>Run the following scripts to create Azure file share for your team. Azure file share for your team can be used to store data assets that can be useful for your entire team. </p>
+<p>When you run the shell scripts, you will be prompted to type in your Azure account and Azure subscription information. </p>
+<p><strong>Windows</strong></p>
+<pre><code>wget &quot;https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/TDSP/CreateFileShare.ps1&quot; -outfile &quot;CreateFileShare.ps1&quot;
+.\CreateFileShare.ps1
+</code></pre>
+
+<p><img src="media/create_fileshare_win.PNG" />	</p>
+<p>Log in to your Microsoft Azure account when prompted:</p>
+<p><img src="media/file_create_s1.PNG" /></p>
+<p>Select the Azure subscription you want to use:</p>
+<p><img src="media/file_create_s2.PNG" /></p>
+<p>Under your selected subscription, you can select which storage account to use or create a new one:</p>
+<p><img src="media/file_create_s3.PNG" /></p>
+<p>Enter the name of the file share services to create, only lower case characters, numbers and - are accepted:</p>
+<p><img src="media/file_create_s4.PNG" /></p>
+<p>After the file service is created, you can save the file share information for later use when you mount it to Azure Virtual machines:</p>
+<p><img src="media/file_create_s5.PNG" /></p>
+<p><strong>Linux</strong></p>
+<pre><code>wget &quot;https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/TDSP/CreateFileShare.sh&quot;
+bash CreateFileShare.sh
+</code></pre>
+
+<p>Log in to your Microsoft Azure account following the instructions on screen:</p>
+<p><img src="media/file_create_linux_s1.PNG" /></p>
+<p>Select the Azure subscription you want to use:</p>
+<p><img src="media/file_create_linux_s2.PNG" /></p>
+<p>Under your selected subscription, you can select which storage account to use or create a new one:</p>
+<p><img src="media/file_create_linux_s3.PNG" /></p>
+<p>Enter the name of the file share services to create, only lower case characters, numbers and - are accepted:</p>
+<p><img src="media/file_create_linux_s4.PNG" /></p>
+<p>After the file service is created, you can save the file share information for later use when you mount it to Azure Virtual machines:</p>
+<p><img src="media/file_create_linux_s5.PNG" /></p>
+<h3>5. Mount file share (Team FS) (Optional)</h3>
+<p>After file share is created succesfully, it can be mounted to your local machine using the following scripts.</p>
+<p><strong>Windows</strong></p>
+<pre><code>wget &quot;https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/TDSP/AttachFileShare.ps1&quot; -outfile &quot;AttachFileShare.ps1&quot;
+.\AttachFileShare.ps1
+</code></pre>
+
+<p>The subscriptions under your Azure account will be listed and you will be asked if you have a file share information file, type in the file name we created in previous step, if you do not have a file share information file, you can still type in the required information following the instruction on the screen: </p>
+<p><img src="media/attach_s1.PNG" /></p>
+<p>Then you will be asked to enter the name of the drive to be added to your virtual machine, which should be different from the ones that are already in your virtual machine:</p>
+<p><img src="media/attach_s2.PNG" /></p>
+<p>You will find that a new drive (F drive) is successfully mounted to your machine.</p>
+<p><img src="media/attach_s3.PNG" /></p>
+<p>If you do not have a file share information to use, you can follow the instructions on screen to to type in required subscription, storage account, and file share service information to attach file share to your machine:</p>
+<p><img src="media/attach_s4.PNG" /></p>
+<p>You need to type in your subscription name, select storage account where file share is created and type in the file share name:</p>
+<p><img src="media/attach_s5.PNG" /></p>
+<p>After you type in the name of drive to be added to your virtual machine, which should be different from the current ones, the file share will attached to your machine:</p>
+<p><img src="media/attach_s6.PNG" /></p>
+<p>Now your file share is successfully mounted to your machine. </p>
+<p><img src="media/attach_s7.PNG" /></p>
+<p><strong>Linux</strong></p>
+<pre><code>wget &quot;https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/TDSP/AttachFileShare.sh&quot;
+bash AttachFileShare.sh
+</code></pre>
+
+<p><img src="media/attach_s1_linux.PNG" /></p>
+<p>You will be asked if you have a file containing the file share information, type in the name of file to retrieve required account, subscription and storage account information, if you do not have a such file, you can type in them following the instruction on screen:</p>
+<p><img src="media/attach_s2_linux.PNG" /></p>
+<p>Then you will be asked to enter the name of the drive to be added to your virtual machine, which should be different from the ones that are already in your virtual machine:</p>
+<p><img src="media/attach_s3_linux.PNG" /></p>
+<p>You will find that a new drive (mounted on fs0823) is successfully mounted to your machine.</p>
+<p><img src="media/attach_s4_linux.PNG" /></p>
+<p>If you do not have a file containing the file share information, below are the steps to follow:</p>
+<p>Type in the subscription name where the file share is created:</p>
+<p><img src="media/attach_s5_linux.PNG" /></p>
+<p>Select the storage account under your subscription and type in the file share name:</p>
+<p><img src="media/attach_s6_linux.PNG" /></p>
+<p>Enter the name of drive to be added to your machine, which should be different from the existing ones:</p>
+<p><img src="media/attach_s7_linux.PNG" /></p>
+<p>You will see that the new file share (mounted on fileshare0823) is succefssfully mounted to your virtual machine.</p>
+<p><img src="media/attach_s8_linux.PNG" /></p>
+<h3>6. Add team members</h3>
+<p>From your team VSTS server's homepage, click the <strong>gear icon</strong> next to your user name in the upper right corner, then click <strong>Security</strong>, you may add members to your team with different permissions. More details please refer to <strong>Security Control</strong> section in <a href="./5_Tools.html">Tools</a>.</p>
+<p><img src="media/add_team_members.PNG" /></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

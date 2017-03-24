@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>5_Tools</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h2>Tools</h2>
+<ol>
+<li>
+<p>Install Git on Windows and Linux machine</p>
+<p><strong>Windows machine</strong></p>
+<p>Chocolaty and Git Credential Manager need to be installed before using Git. 
+<code>iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
+choco install git-credential-manager-for-windows -y</code>
+<strong>Linux machine</strong>
+<code>sudo yum install git</code></p>
+</li>
+<li>
+<p>Create SSH public key</p>
+<p>First generate a public SSH key, and add the key to SSH public keys in TDSP security setting page using this command. Copy the string starting with &quot;ssh-rsa&quot; and go to visual studio team server, click <strong>your name</strong> --&gt; <strong>security</strong> --&gt; <strong>SSH public keys</strong> --&gt; <strong>+Add</strong> to store your paste save the copied string.
+<code>ssh-keygen
+cat .ssh/id_rsa.pub</code>
+<img src="media/generate_ssh.PNG" /></p>
+<p><img src="media/user_setting.PNG" /></p>
+<p><img src="media/add_ssh.PNG" /></p>
+</li>
+<li>
+<p>Provision Data Science Virtual Machine</p>
+<p>Go to <a href="www.portal.azure.com">Azure Portal</a> to provision a Data Science Virtual Machine. <strong>+New</strong> --&gt; Data Science Virtual Machine, you can choose to a Windows or Linux data science virtual machine. Fill in the required information and your machine will be starting shortly.</p>
+<p><img src="media/create_vm_in_portal.PNG" /></p>
+<p><img src="media/create_win_VM_step1.PNG" /></p>
+<p><img src="media/create_win_VM_step2.PNG" /></p>
+<p>When your machine is provisioned, for Windows DSVM, you can use remote desktop to login and for linux DSVM, you can use ssh tools like Putty to login.</p>
+<p><img src="media/win_VM_setting.PNG" /></p>
+<p><img src="media/win_DSVM_info.PNG" /></p>
+<p><img src="media/linux_VM_setting.PNG" /></p>
+<p><img src="media/linux_DSVM_info.PNG" /></p>
+</li>
+<li>
+<p>Create file share</p>
+<p><strong>Windows</strong>
+<code>wget &quot;https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/TDSP/CreateFileShare.ps1&quot; -outfile &quot;CreateFileShare.ps1&quot;
+.\CreateFileShare.ps1</code>
+<strong>Linux</strong>
+<code>wget &quot;https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/TDSP/CreateFileShare.sh&quot;
+bash CreateFileShare.sh</code></p>
+</li>
+<li>
+<p>Mount file share</p>
+<p><strong>Windows</strong>
+<code>wget &quot;https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/TDSP/AttachFileShare.ps1&quot; -outfile &quot;AttachFileShare.ps1&quot;
+.\AttachFileShare.ps1</code>
+<strong>Linux</strong>
+<code>wget &quot;https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/TDSP/AttachFileShare.sh&quot;
+bash AttachFileShare.sh</code></p>
+</li>
+<li>
+<p>Sprint planning</p>
+<ul>
+<li>
+<p>Create feature under team project</p>
+<p>After your project is created under a team, go to  team overview page and click <strong>Manage work</strong> --&gt; <strong>Features</strong> --&gt; New Item, and then give some description on this feature. You can drag the feature to different stages in the board: New Active, Resolved, or Closed. The feature can also be assigned to a specific person in your team.</p>
+<p><img src="media/manage_work.PNG" /></p>
+<p><img src="media/click_features.PNG" /></p>
+<p><img src="media/create_new_feature.PNG" /></p>
+<p><img src="media/assign_feature.PNG" /></p>
+</li>
+<li>
+<p>Add stories under feature</p>
+<p>Under the feature, you can add stories to list out the tasks needed for this feature. Click the story item, you can edit the status, description, comments, planning, priority, etc. You can switch the view from board to backlog, features to stories to check the status of your project.</p>
+<p><img src="media/add_story.PNG" /></p>
+<p><img src="media/switch_view.PNG" /></p>
+</li>
+<li>
+<p>Add Tasks in current iteration</p>
+<p>In the current iteration backlog, click New to create new task. Click the <strong>+</strong> icon to set it to be a task or a bug. Click the item to add more details.</p>
+<p><img src="media/add_task.PNG" /></p>
+<p><img src="media/edit_task.PNG" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Checkout branch</p>
+<p>To create a branch, use git checkout -b &lt;new-branch-name&gt; [&lt;base-branch-name&gt;], where base-branch-name is optional and defaults to master. I'm going to create a new branch called weig<em>pull</em>request_2 from the master branch and push it to team server.
+<code>git pull origin master
+git checkout -b weig_pull_request_2
+git push origin weig_pull_request_2
+git status</code>
+<img src="media/create_branch.PNG" /></p>
+<p>You can work in your local project folder to make modifications. Suppose you made some changes in the R file in your local machine.</p>
+<p><img src="media/make_changes_in_local.PNG" /></p>
+<p>You can commit thoses changes to the branch using the regular Git commands.
+<code>git status
+git add .
+git commit -m&quot;Wei added variable Z in R&quot;
+git push</code></p>
+</li>
+<li>
+<p>Pull request and Code review</p>
+<p><img src="media/push_to_branch.PNG" /></p>
+<p>Go to your team server, under your project page, you can see your branch is listed. Reviewers can be added to review your work through creating a pull request. Then your reviewers can make comments on your work.</p>
+<p><img src="media/your_branch_on_server.PNG" /></p>
+<p><img src="media/create_pull_request.PNG" /></p>
+<p><img src="media/add_reviewer.PNG" /></p>
+<p><img src="media/add_comments.PNG" /></p>
+</li>
+<li>
+<p>Security control</p>
+</li>
+</ol>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
